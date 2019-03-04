@@ -140,20 +140,12 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set 'sources_1' fileset object
 #Uncomment this block if u want to add MATLAB dataCapture IP core
 ##########################################################################################
-#set obj [get_filesets sources_1]
-#set files [list \
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_capture_comparator.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_capture_comparator_1bit.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_capture_core.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_capture_data.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_capture_trigger_combine.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_capture_trigger_condition.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_dcram.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_jtag_core.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_jtag_register.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_jtag_vendor_ip0.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/hdlverifier_synchronizer.v"]"\
-# "[file normalize "$origin_dir/Matlab/hdlsrc/datacapture.v"]"\
+set obj [get_filesets sources_1]
+set file "[file normalize "$origin_dir/src/hdl/cntr.v"]"
+set file_added [add_files -norecurse -fileset $obj $file]
+
+#set file [list \
+
 # "[file normalize "$origin_dir/src/hdl/cntr.v"]"\
 #]
 #add_files -norecurse -fileset $obj $files
