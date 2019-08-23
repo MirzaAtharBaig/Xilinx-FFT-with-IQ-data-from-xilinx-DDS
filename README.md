@@ -10,4 +10,4 @@ This project implements Fast Fourier Transform (FFT) of IQ data using xilinx FFT
 3-Now go to tool->run tcl script
       This will build the project and create the block design with default settings.
 
-The project takes the LVDS 200MHz clock from Xilinx VC707 board and shows the output on ILAs.You can choose where to get input clock for the whole design. The outputs of the projects are shown using two ILA. One for DDS compiler and other for FFT core.
+The project takes the LVDS 200MHz clock from Xilinx VC707 board and shows the output on ILAs.You can choose where to get input clock for the whole design. The outputs of the project are shown using two ILA. One for DDS compiler and other for FFT core.
